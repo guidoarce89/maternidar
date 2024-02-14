@@ -1,6 +1,7 @@
-body {
+* {
   margin: 0;
-  font-family: 'Epilogue', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -13,27 +14,40 @@ body {
   --black: #322203;
   --white: #FFFFFF;
   --gray: #EBEBEB;
+  --lightRed: #F47C7C;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  margin-top: 80px;
+}
+
+.page {
+  min-height: calc(100vh - 80px);
 }
 
 /* MENU */
 .menu {
-  background-color: var(--menuBar);
   font-family: 'Quicksand', sans-serif;
-  box-sizing: border-box;
-  position: fixed;
+  background-color: var(--menuBar);
+  overflow: hidden;
   height: 80px;
-  width: 100%;
+  position: fixed;
   top: 0;
+  width: 100%;
 }
 
 .menu ul {
-  margin: 0;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   column-gap: 1.1em;
-  height: 100%;
   align-items: center;
+  height: 100%;
+  padding: 0 1.1em;
 }
 
 .menu ul li {
@@ -43,17 +57,12 @@ body {
 
 .menu ul li a {
   color: var(--black);
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .menu ul li a img {
   height: 40px;
-}
-
-.page {
-  margin-top: 80px;
-  height: calc(100vh - 80px);
 }
 
 /* MAIN */
@@ -61,41 +70,102 @@ body {
   background-image: url('../images/main.jpg');
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
-  height: 100%;
-}
-
-.main-container {
+  color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   align-items: center;
-  color: var(--white);
 }
 
-.main-container h1 {
+.main h1 {
   font-family: Hatton;
   font-size: 3.5em;
   text-align: center;
   width: 15em;
-  margin: 0;
 }
 
-.main-container button {
+.main button {
   border: none;
   text-transform: uppercase;
   font-family: 'Epilogue', 'sans-serif';
   color: var(--black);
   padding: 15px 35px;
-  font-size: .7em;
-  font-weight: bold;
+  font-size: .75em;
   margin: 2.5em 0;
   background-color: var(--gray);
 }
 
-.main-container p {
+.main p {
   font-size: 1.1em;
   letter-spacing: .1em;
 }
 
 /* ABOUT US */
+.about-us-grid {
+  padding: 50px;
+  background-color: var(--lightRed);
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 100px;
+  grid-template-areas:
+    "about-us team-pictures"
+    "phrase phrase";
+}
+
+.about-us-grid h2 {
+  font-family: Hatton;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.about-us-grid .about-us {
+  padding: 0 6.5em 0 2.5em;
+}
+
+.about-us-grid .about-us p {
+  margin: 1.5em 0;
+  letter-spacing: .08em;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.about-us-grid .our-team h2 {
+  text-align: center;
+}
+
+.about-us-grid .our-team .our-team-pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.about-us-grid .our-team .our-team-pictures figure {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.about-us-grid .our-team .our-team-pictures figure img {
+  height: 6em;
+  border-radius: 50%;
+  margin-bottom: 1.1em;
+}
+
+.about-us-grid .our-team .our-team-pictures figure figcaption {
+  font-size: .8em;
+}
+
+.about-us-grid blockquote {
+  color: var(--lightRed);
+  background-color: var(--white);
+  grid-area: phrase;
+  justify-self: center;
+  text-align: center;
+  font-family: Hatton;
+  font-weight: 600;
+  vertical-align: middle;
+  font-size: 1.5em;
+  border-radius: 30px;
+  padding: 20px 30px;
+  width: 50%;
+}
