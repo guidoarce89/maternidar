@@ -15,6 +15,7 @@
   --black: #322203;
   --white: #FFFFFF;
   --gray: #EBEBEB;
+  --darkGray: #949F9A;
   --lightRed: #F47C7C;
 }
 
@@ -359,3 +360,56 @@ body {
   Title font color: #949F9A
   Font color: #322203
 */
+.contact-grid {
+  background-color: var(--lightRed);
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  gap: 2em;
+}
+
+.contact-grid .contact-description {
+  background-color: var(--lightSalmon);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 65%;
+  margin: auto;
+  border-radius: 20em 20em 0 0;
+}
+
+.contact-grid .contact-description h2 {
+  text-transform: uppercase;
+  font-family: Hatton;
+  font-size: 2.5em;
+  color: var(--darkGray);
+  margin-top: 1em;
+}
+
+.contact-grid .contact-description .contacts p {
+  margin: 2.5em 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--black);
+}
+.contact-grid .contact-description .contacts p span {
+  margin: .5em 0;
+}
+
+.contact-grid .contact-description img {
+  height: 3em;
+}
+
+.contact-grid footer {
+  background-color: var(--lightSalmon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-grid footer img {
+  height: 2em;
+  margin: 0 2em;
+}
