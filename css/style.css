@@ -119,11 +119,11 @@ body {
   margin-bottom: 1em;
 }
 
-.about-us-grid .about-us {
+.about-us-grid .about-us-description {
   padding: 0 6.5em 0 2.5em;
 }
 
-.about-us-grid .about-us p {
+.about-us-grid .about-us-description p {
   margin: 1.5em 0;
   letter-spacing: .08em;
   line-height: 1.5em;
@@ -169,3 +169,80 @@ body {
   padding: 20px 30px;
   width: 50%;
 }
+
+/* OUR WORK */
+.our-work-grid {
+  padding: 50px;
+  background-color: var(--lightRed);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+}
+
+.our-work-grid h2 {
+  font-family: Hatton;
+  text-transform: uppercase;
+  margin: 0 0 1em 1.5em;
+}
+
+.our-work-grid .our-work-description .our-work-container {
+  background-color: var(--white);
+  color: var(--lightRed);
+  padding: 1em 2.5em;
+  border-radius: 1.5em;
+}
+
+.our-work-grid .our-work-description p {
+  margin: 1.5em 0;
+  letter-spacing: .08em;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.our-work-grid .our-work-pictures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.our-work-grid .our-work-pictures figure {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.our-work-grid .our-work-pictures figure img {
+  height: 11em;
+  border-radius: 50%;
+}
+
+/* Como ayudar
+  Title color: #F47C7C
+  Background color: #F8EDE3
+  Image button color: #A27304
+  Font color: #7F6F6B
+  Secondary font color: #F47C7C
+  Background secondary font color: #FFFFFF
+  Button: #EBEBEB
+  Button Font color: #322203
+*/
+
+/* Nuestros logros
+  Title color: #F47C7C
+  Background color: #FFFFFF
+  Font color: #F47C7C
+  Background font color: #F8EDE3
+*/
+
+/* Quieres ser voluntario
+  Background title color: #F47C7C
+  Title color: #FFFFFF
+  Background color: #F8EDE3
+  Font color: #322203
+*/
+
+/* Contactos
+  Background color: #F47C7C
+  Background font color: #F8EDE3
+  Title font color: #949F9A
+  Font color: #322203
+*/
