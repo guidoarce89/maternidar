@@ -308,12 +308,50 @@ body {
   border-radius: 30px;
 }
 
-/* Quieres ser voluntario
-  Background title color: #F47C7C
-  Title color: #FFFFFF
-  Background color: #F8EDE3
-  Font color: #322203
-*/
+/* VOLUNTEER */
+.volunteer-grid {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightSalmon);
+}
+
+.volunteer-grid h2 {
+  background-color: var(--lightRed);
+  color: var(--white);
+  text-align: center;
+  font-family: Hatton;
+  text-transform: uppercase;
+  padding: 1.5em;
+}
+
+.volunteer-grid .volunteer-description {
+  text-align: center;
+  margin: 4em auto;
+}
+
+.volunteer-grid .volunteer-description .volunteer-pictures {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.volunteer-grid .volunteer-description .volunteer-pictures img {
+  height: 15em;
+  margin: 0 1.5em;
+}
+
+.volunteer-grid .volunteer-description p {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--black);
+}
+
+.volunteer-grid .volunteer-description p.volunteer-description-title {
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  font-size: 1.2em;
+}
 
 /* Contactos
   Background color: #F47C7C
