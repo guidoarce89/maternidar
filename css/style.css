@@ -229,13 +229,14 @@ body {
   font-family: Hatton;
   text-transform: uppercase;
   text-align: center;
+  margin: auto;
 }
 
 .help-us-grid .help-us-description {
   padding: 3.5em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .help-us-grid .help-us-description .help-us-opt-1,
@@ -255,6 +256,7 @@ body {
 
 .help-us-grid .help-us-description button {
   border: none;
+  margin: auto;
   text-transform: uppercase;
   font-family: 'Epilogue', 'sans-serif';
   color: var(--black);
@@ -264,7 +266,7 @@ body {
 }
 
 .help-us-grid .help-us-description .help-us-account {
-  margin: 1.5em 0;
+  margin: 1.5em auto;
   background-color: var(--white);
   columns: var(--lightRed);
   padding: 1em 4.5em;
@@ -280,12 +282,31 @@ body {
   box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
 }
 
-/* Nuestros logros
-  Title color: #F47C7C
-  Background color: #FFFFFF
-  Font color: #F47C7C
-  Background font color: #F8EDE3
-*/
+/* ACHIEVEMENTS */
+.achievements-grid {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.achievements-grid h2 {
+  color: var(--lightRed);
+  font-family: Hatton;
+  text-transform: uppercase;
+}
+
+.achievements-grid blockquote {
+  color: var(--lightRed);
+  background-color: var(--lightSalmon);
+  text-align: center;
+  font-family: Hatton;
+  vertical-align: middle;
+  font-size: 1.5em;
+  width: 50%;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
 
 /* Quieres ser voluntario
   Background title color: #F47C7C
