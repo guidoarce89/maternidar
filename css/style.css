@@ -10,7 +10,8 @@
 }
 
 :root {
-  --menuBar: #F8EDE3;
+  --lightSalmon: #F8EDE3;
+  --lightDarkSalmon: #F1DCC8;
   --black: #322203;
   --white: #FFFFFF;
   --gray: #EBEBEB;
@@ -33,12 +34,13 @@ body {
 /* MENU */
 .menu {
   font-family: 'Quicksand', sans-serif;
-  background-color: var(--menuBar);
+  background-color: var(--lightSalmon);
   overflow: hidden;
   height: 80px;
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: 2px solid var(--lightDarkSalmon);
 }
 
 .menu ul {
@@ -215,16 +217,68 @@ body {
   border-radius: 50%;
 }
 
-/* Como ayudar
-  Title color: #F47C7C
-  Background color: #F8EDE3
-  Image button color: #A27304
-  Font color: #7F6F6B
-  Secondary font color: #F47C7C
-  Background secondary font color: #FFFFFF
-  Button: #EBEBEB
-  Button Font color: #322203
-*/
+/* HELP US */
+.help-us-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--lightSalmon);
+}
+
+.help-us-grid h2 {
+  color: var(--lightRed);
+  font-family: Hatton;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.help-us-grid .help-us-description {
+  padding: 3.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help-us-grid .help-us-description .help-us-opt-1,
+.help-us-grid .help-us-description .help-us-opt-2,
+.help-us-grid .help-us-description .help-us-opt-3 {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.help-us-grid .help-us-description .help-us-opt-1 img,
+.help-us-grid .help-us-description .help-us-opt-2 img,
+.help-us-grid .help-us-description .help-us-opt-3 img {
+  margin-right: 2em;
+  height: 4em;
+}
+
+.help-us-grid .help-us-description button {
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Epilogue', 'sans-serif';
+  color: var(--black);
+  padding: 15px 35px;
+  font-size: .75em;
+  background-color: var(--gray);
+}
+
+.help-us-grid .help-us-description .help-us-account {
+  margin: 1.5em 0;
+  background-color: var(--white);
+  columns: var(--lightRed);
+  padding: 1em 4.5em;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-us-grid .help-us-picture {
+  background-image: url('../images/main.jpg');
+  background-size: cover;
+  background-position-x: center;
+  box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
+}
 
 /* Nuestros logros
   Title color: #F47C7C
