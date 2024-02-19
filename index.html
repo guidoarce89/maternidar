@@ -11,17 +11,24 @@
 </head>
 <body>
   <!-- Menu -->
-  <nav class="menu">
-    <ul>
-      <li><a href="#about-us">Quienes somos</a></li>
-      <li><a href="#our-work">Que hacemos</a></li>
-      <li><a href="#help-us">Como ayudar</a></li>
-      <li><a href="#"><img src="images/logo_maternidar.jpeg" alt="Logo Maternidar"></a></li>
-      <li><a href="#achievements">Logros</a></li>
-      <li><a href="#volunteer">Solicitar kit</a></li>
-      <li><a href="#contact">Contacto</a></li>
-    </ul>
-  </nav>
+  <header>
+    <!-- <a href="#"><img class="logo" src="images/logo_maternidar.jpeg" height="40px" alt="Logo Maternidar"></a> -->
+    <input id="collapsed-menu-checkbox" class="collapsed-menu-checkbox" type="checkbox">
+    <label for="collapsed-menu-checkbox" class="collapsed-menu-icon">
+      <span class="collapsed-menu-icon-line"></span>
+    </label>
+    <nav role="navigation" class="menu">
+      <ul>
+        <li><a href="#about-us">Quienes somos</a></li>
+        <li><a href="#our-work">Que hacemos</a></li>
+        <li><a href="#help-us">Como ayudar</a></li>
+        <li><a href="#"><img class="logo" src="images/logo_maternidar.jpeg" alt="Logo Maternidar"></a></li>
+        <li><a href="#achievements">Logros</a></li>
+        <li><a href="#volunteer">Solicitar kit</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Pagina principal -->
   <main class="page main">
@@ -189,5 +196,14 @@
       <span><img src="images/facebook_logo.png" alt="maternidar facebook"></span>
     </footer>
   </section>
+  <script>
+    const links = document.querySelectorAll(".menu ul li");
+    links.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu(event) {
+      const checkbox = document.getElementById("collapsed-menu-checkbox");
+      checkbox.checked = false;
+    }
+  </script>
 </body>
 </html>
