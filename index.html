@@ -11,23 +11,27 @@
 </head>
 <body>
   <!-- Menu -->
-  <header>
-    <!-- <a href="#"><img class="logo" src="images/logo_maternidar.jpeg" height="40px" alt="Logo Maternidar"></a> -->
-    <input id="collapsed-menu-checkbox" class="collapsed-menu-checkbox" type="checkbox">
-    <label for="collapsed-menu-checkbox" class="collapsed-menu-icon">
-      <span class="collapsed-menu-icon-line"></span>
-    </label>
-    <nav role="navigation" class="menu">
-      <ul>
-        <li><a href="#about-us">Quienes somos</a></li>
-        <li><a href="#our-work">Que hacemos</a></li>
-        <li><a href="#help-us">Como ayudar</a></li>
-        <li><a href="#"><img class="logo" src="images/logo_maternidar.jpeg" alt="Logo Maternidar"></a></li>
-        <li><a href="#achievements">Logros</a></li>
-        <li><a href="#volunteer">Solicitar kit</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+  <header class="wrapper">
+    <div class="header-content">
+      <a href="#" class="logo">
+        <img src="images/logo_maternidar.jpeg" alt="logo maternidar" class="logo">
+      </a>
+      <input id="collapsed-menu-checkbox" class="collapsed-menu-checkbox" type="checkbox">
+      <label for="collapsed-menu-checkbox" class="collapsed-menu-icon">
+        <span class="collapsed-menu-icon-line"></span>
+      </label>
+      <nav role="navigation" class="menu wrapper">
+        <ul>
+          <li><a href="#about-us">Quienes somos</a></li>
+          <li><a href="#our-work">Que hacemos</a></li>
+          <li><a href="#help-us">Como ayudar</a></li>
+          <li><a class="logo" href="#"><img src="images/logo_maternidar.jpeg" alt="logo maternidar" class="logo"></a></li>
+          <li><a href="#achievements">Logros</a></li>
+          <li><a href="#volunteer">Solicitar kit</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Pagina principal -->
@@ -38,7 +42,7 @@
   </main>
 
   <!-- Quienes somos -->
-  <section id="about-us" class="page about-us-grid">
+  <!-- <section id="about-us" class="page about-us-grid">
     <div class="about-us-description">
       <h2>Quienes somos</h2>
       <p>
@@ -74,10 +78,10 @@
         inseguridades"
       </p>
     </blockquote>
-  </section>
+  </section> -->
 
   <!-- Que hacemos -->
-  <section id="our-work" class="page our-work-grid">
+  <!-- <section id="our-work" class="page our-work-grid">
     <div class="our-work-description">
       <h2>Que hacemos en maternidar</h2>
       <div class="our-work-container">
@@ -109,10 +113,10 @@
       <figure><img src="images/user-example.jpg" alt=""></figure>
       <figure><img src="images/user-example.jpg" alt=""></figure>
     </div>
-  </section>
+  </section> -->
 
   <!-- Como ayudar -->
-  <section id="help-us" class="page help-us-grid">
+  <!-- <section id="help-us" class="page help-us-grid">
     <div class="help-us-description">
       <h2>Como ayudar</h2>
       <div class="help-us-opt-1">
@@ -144,19 +148,19 @@
       </h2>
     </div>
     <div class="help-us-picture"></div>
-  </section>
+  </section> -->
 
   <!-- Logros -->
-  <section id="achievements" class="page achievements-grid">
+  <!-- <section id="achievements" class="page achievements-grid">
     <h2>Nuestros logros</h2>
     <blockquote>
       "Cuando decimos que tus donaciones cambian la vida de alguien, decimos la
       verdad"
     </blockquote>
-  </section>
+  </section> -->
 
   <!-- Ser voluntario -->
-  <section id="volunteer" class="page volunteer-grid">
+  <!-- <section id="volunteer" class="page volunteer-grid">
     <h2>¿Queres ser voluntario?</h2>
     <div class="volunteer-description">
       <div class="volunteer-pictures">
@@ -173,10 +177,10 @@
         quos nam praesentium ipsum hic delectus explicabo dolore doloremque!
       </p>
     </div>
-  </section>
+  </section> -->
 
   <!-- Contactos -->
-  <section id="contact" class="page contact-grid">
+  <!-- <section id="contact" class="page contact-grid">
     <div class="contact-description">
       <h2>Contactos</h2>
       <div class="contacts">
@@ -195,7 +199,7 @@
       <span><img src="images/instagram_logo.png" alt="maternidad instagram"></span>
       <span><img src="images/facebook_logo.png" alt="maternidar facebook"></span>
     </footer>
-  </section>
+  </section> -->
   <script>
     const links = document.querySelectorAll(".menu ul li");
     links.forEach(n => n.addEventListener("click", closeMenu));

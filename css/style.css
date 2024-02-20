@@ -11,12 +11,14 @@
 
 :root {
   --lightSalmon: #F8EDE3;
+  --lightSalmonAlpha: rgba(248, 237, 227, .9);
   --lightDarkSalmon: #F1DCC8;
   --black: #322203;
   --white: #FFFFFF;
   --gray: #EBEBEB;
   --darkGray: #949F9A;
   --lightRed: #F47C7C;
+  --lightRedAlpha: rgba(244, 124, 124, .2);
 }
 
 html {
@@ -24,60 +26,218 @@ html {
 }
 
 body {
+  font-size: 16px;
   font-family: 'Epilogue', sans-serif;
   margin-top: 5em;
+}
+
+.wrapper {
+  padding: 0 1.5em;
 }
 
 .page {
   min-height: calc(100vh - 80px);
 }
 
+/* MENU */
 .logo {
+  display: block;
   height: 2.5em;
 }
 
-/* MENU */
 header {
-  font-family: 'Quicksand', sans-serif;
-  background-color: var(--lightSalmon);
   height: 5em;
+  background: var(--lightSalmon);
+  border-bottom: 2px solid var(--lightDarkSalmon);
+  font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.collapsed-menu-checkbox {
+  display: none;
+}
+
+.collapsed-menu-icon {
+  cursor: pointer;
+}
+
+.collapsed-menu-icon-line {
+  background: var(--black);
+  display: block;
+  height: 2px;
+  width: 24px;
+  position: relative;
+}
+
+.collapsed-menu-icon-line::before,
+.collapsed-menu-icon-line::after {
+  background: var(--black);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all .2s ease-out;
+}
+
+.collapsed-menu-icon-line::before {
+  top: 5px;
+}
+
+.collapsed-menu-icon-line::after {
+  top: -5px;
+}
+
+.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line {
+  background: transparent;
+}
+
+.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::before,
+.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::after {
+  top: 0;
+}
+
+.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::before {
+  transform: rotate(45deg);
+}
+.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--lightSalmonAlpha);
+  height: 100vh;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  border-top: 1px solid var(--lightRedAlpha);
+}
+
+.menu ul li:nth-child(4) {
+  display: none;
+}
+
+.menu ul li a {
+  color: var(--black);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+
+.collapsed-menu-checkbox:checked ~ .menu {
+  display: block;
+}
+
+/* MAIN */
+.main {
+  background-image: url('../images/main.jpg');
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  font-family: Hatton;
+  text-align: center;
+  padding: 0 1.5em;
+}
+
+.main button {
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Epilogue', sans-serif;
+  color: var(--black);
+  padding: 1em 2em;
+  margin: 2em 0;
+  background: var(--gray);
+  letter-spacing: .1em;
+}
+
+.main p {
+  letter-spacing: .1em;
+}
+
+@media screen and (min-width: 480px) {
+  /* MAIN */
+  .main h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* MAIN */
+  .main h1 {
+    font-size: 3em;
+  }
+
+  .main p {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* MAIN */
+  .main h1 {
+    font-size: 3.5em;
+  }
+
+  .main p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  /* MAIN */
+  .main h1 {
+    font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* MAIN */
+  .main h1 {
+    max-width: 1440px;
+    font-size: 4.5em;
+  }
+}
+
+/*
+/* MENU * /
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 2px solid var(--lightDarkSalmon);
 }
 
-.collapsed-menu-checkbox,
 .collapsed-menu-icon {
   display: none;
-}
-
-.collapsed-menu-icon-line {
-  background-color: var(--black);
-  display: block;
-  height: 2px;
-  position: relative;
-  width: 24px;
-}
-
-.collapsed-menu-icon-line::before,
-.collapsed-menu-icon-line::after{
-    background: var(--black);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.collapsed-menu-icon-line::before{
-    top: 5px;
-}
-
-.collapsed-menu-icon-line::after{
-    top: -5px;
 }
 
 .menu {
@@ -101,23 +261,12 @@ header {
   text-transform: uppercase;
 }
 
-/* MAIN */
-.main {
-  background-image: url('../images/main.jpg');
-  background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/* MAIN * /
 .main h1 {
   font-family: Hatton;
   font-size: 3.5em;
   text-align: center;
-  width: 15em;
+  width: 55%;
 }
 
 .main button {
@@ -136,7 +285,7 @@ header {
   letter-spacing: .1em;
 }
 
-/* ABOUT US */
+/* ABOUT US * /
 .about-us-grid {
   padding: 50px;
   background-color: var(--lightRed);
@@ -206,7 +355,7 @@ header {
   width: 50%;
 }
 
-/* OUR WORK */
+/* OUR WORK * /
 .our-work-grid {
   padding: 50px;
   background-color: var(--lightRed);
@@ -251,7 +400,7 @@ header {
   border-radius: 50%;
 }
 
-/* HELP US */
+/* HELP US * /
 .help-us-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -316,7 +465,7 @@ header {
   box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
 }
 
-/* ACHIEVEMENTS */
+/* ACHIEVEMENTS * /
 .achievements-grid {
   padding: 50px;
   display: flex;
@@ -342,7 +491,7 @@ header {
   border-radius: 30px;
 }
 
-/* VOLUNTEER */
+/* VOLUNTEER * /
 .volunteer-grid {
   display: flex;
   flex-direction: column;
@@ -387,7 +536,7 @@ header {
   font-size: 1.2em;
 }
 
-/* Contact */
+/* Contact * /
 .contact-grid {
   background-color: var(--lightRed);
   display: grid;
@@ -443,6 +592,7 @@ header {
 }
 
 @media (max-width: 768px) {
+  /* MENU * /
   .collapsed-menu-icon {
     height: 100%;
     display: flex;
@@ -488,4 +638,19 @@ header {
   .collapsed-menu-checkbox:checked ~ .menu ul li a {
     user-select: none;
   }
+
+  /* MAIN * /
+  .main h1 {
+    font-size: 2.5em;
+    width: 80%;
+  }
 }
+
+/* @media (max-width: 1024px) {
+  /* MAIN * /
+  .main h1 {
+    font-size: 3em;
+    width: 70%;
+  }
+} * /
+*/
