@@ -16,6 +16,7 @@
   --black: #322203;
   --white: #FFFFFF;
   --gray: #EBEBEB;
+  --pink: #FDEDEF;
   --darkGray: #949F9A;
   --lightRed: #F47C7C;
   --lightRedAlpha: rgba(244, 124, 124, .2);
@@ -236,7 +237,7 @@ header {
 .about-us-grid blockquote {
   font-family: Hatton;
   color: var(--lightRed);
-  background-color: var(--white);
+  background-color: var(--pink);
   margin: 2.5em 0 1.5em;
   padding: 1.5em;
   text-align: center;
@@ -245,10 +246,62 @@ header {
   border-radius: 2em;
 }
 
+/* OUR WORK */
+.our-work-grid {
+  background-color: var(--lightRed);
+  color: var(--white);
+  padding: 1.5em;
+}
+
+.our-work-grid h2 {
+  font-family: Hatton;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.our-work-container {
+  background-color: var(--pink);
+  color: var(--lightRed);
+  padding: 1em 2em;
+  border-radius: 2em;
+  margin-bottom: 2em;
+}
+
+.our-work-container p {
+  margin: 1.5em 0;
+  line-height: 1.5em;
+}
+
+.our-work-pictures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5em;
+  align-items: center;
+  text-align: center;
+}
+
+.our-work-pictures img {
+  height: 8em;
+  width: 8em;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 480px) {
   /* MAIN */
   .main h1 {
     font-size: 2.5em;
+  }
+
+  /* OUR WORK */
+  .our-work-grid h2 {
+    padding: 0 1.5em;
+  }
+
+  .our-work-pictures img {
+    height: 10em;
+    width: 10em;
   }
 }
 
@@ -275,6 +328,11 @@ header {
   .about-us-grid blockquote {
     width: 80%;
     margin: 2.5em auto 1.5em;
+  }
+
+  /* OUR WORK */
+  .our-work-pictures {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -317,6 +375,19 @@ header {
     grid-area: phrase;
     width: 70%;
   }
+
+  /* OUR WORK */
+  .our-work-grid {
+    padding: 1.5em 3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4em;
+  }
+
+  .our-work-pictures {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.7em 0;
+  }
 }
 
 @media screen and (min-width: 1240px) {
@@ -335,6 +406,16 @@ header {
     font-size: 1.2em;
     margin: 1.5em 0;
   }
+
+  /* OUR WORK */
+  .our-work-grid h2 {
+    font-size: 2em;
+  }
+
+  .our-work-container p {
+    font-size: 1.1em;
+    margin: 1em 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -350,18 +431,23 @@ header {
     margin: .5em 0;
   }
 
-  .about-us-description p {
-    font-size: 1.4em;
-    margin: 1.5em 0;
-  }
-
-  .our-team-pictures figcaption {
-    font-size: 1.4em;
-  }
-
   .about-us-grid blockquote {
-    margin: 1.5em auto;
-    font-size: 2em;
+    margin: 1em auto;
+  }
+
+  /* OUR WORK */
+  .our-work-grid h2 {
+    font-size: 2.5em;
+  }
+
+  .our-work-container p {
+    font-size: 1.2em;
+    margin: .9em 0;
+  }
+
+  .our-work-pictures img {
+    height: 12.5em;
+    width: 12.5em;
   }
 }
 
@@ -380,51 +466,6 @@ header {
   text-align: center;
   align-items: center;
   height: 100%;
-}
-
-/* OUR WORK * /
-.our-work-grid {
-  padding: 50px;
-  background-color: var(--lightRed);
-  color: var(--white);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5em;
-}
-
-.our-work-grid h2 {
-  font-family: Hatton;
-  text-transform: uppercase;
-  margin: 0 0 1em 1.5em;
-}
-
-.our-work-grid .our-work-description .our-work-container {
-  background-color: var(--white);
-  color: var(--lightRed);
-  padding: 1em 2.5em;
-  border-radius: 1.5em;
-}
-
-.our-work-grid .our-work-description p {
-  margin: 1.5em 0;
-  letter-spacing: .08em;
-  line-height: 1.5em;
-  font-size: 1em;
-}
-
-.our-work-grid .our-work-pictures {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.our-work-grid .our-work-pictures figure {
-  text-align: center;
-  margin: 1em 0;
-}
-
-.our-work-grid .our-work-pictures figure img {
-  height: 11em;
-  border-radius: 50%;
 }
 
 /* HELP US * /
