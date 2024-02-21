@@ -17,6 +17,7 @@
   --white: #FFFFFF;
   --gray: #EBEBEB;
   --pink: #FDEDEF;
+  --brown: #7F6F6B;
   --darkGray: #949F9A;
   --lightRed: #F47C7C;
   --lightRedAlpha: rgba(244, 124, 124, .2);
@@ -288,6 +289,61 @@ header {
   border-radius: 50%;
 }
 
+/* HELP US */
+.help-us-grid {
+  background-color: var(--lightSalmon);
+  color: var(--brown);
+}
+
+.help-us-grid h2 {
+  color: var(--lightRed);
+  font-family: Hatton;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.7em;
+  margin: 1em 0;
+}
+
+.help-us-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.help-us-description button {
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Epilogue', sans-serif;
+  color: var(--black);
+  padding: 1em 2em;
+  margin: 1em 0;
+  background-color: var(--gray);
+  letter-spacing: .1em;
+}
+
+.help-us-option {
+  margin: 1em 0;
+}
+
+.help-us-option img {
+  height: 3.5em;
+  margin-bottom: 1em;
+}
+
+.help-us-option p {
+  text-align: left;
+}
+
+.help-us-account {
+  background-color: var(--white);
+  padding: 1em;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 480px) {
   /* MAIN */
   .main h1 {
@@ -333,6 +389,20 @@ header {
   /* OUR WORK */
   .our-work-pictures {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* HELP US */
+  .help-us-description {
+    padding: 0 3em;
+  }
+
+  .help-us-option {
+    display: flex;
+    align-items: center;
+  }
+
+  .help-us-option img {
+    margin-right: 2em;
   }
 }
 
@@ -388,6 +458,19 @@ header {
     grid-template-columns: repeat(2, 1fr);
     padding: 1.7em 0;
   }
+
+  /* HELP US */
+  .help-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+  }
+
+  .help-us-picture {
+    background-image: url('../images/main.jpg');
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
+  }
 }
 
 @media screen and (min-width: 1240px) {
@@ -415,6 +498,19 @@ header {
   .our-work-container p {
     font-size: 1.1em;
     margin: 1em 0;
+  }
+
+  /* HELP US */
+  .help-us-grid h2 {
+    font-size: 2em;
+  }
+
+  .help-us-option p {
+    font-size: 1.2em;
+  }
+
+  .help-us-option img {
+    height: 4em;
   }
 }
 
@@ -466,71 +562,6 @@ header {
   text-align: center;
   align-items: center;
   height: 100%;
-}
-
-/* HELP US * /
-.help-us-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: var(--lightSalmon);
-}
-
-.help-us-grid h2 {
-  color: var(--lightRed);
-  font-family: Hatton;
-  text-transform: uppercase;
-  text-align: center;
-  margin: auto;
-}
-
-.help-us-grid .help-us-description {
-  padding: 3.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.help-us-grid .help-us-description .help-us-opt-1,
-.help-us-grid .help-us-description .help-us-opt-2,
-.help-us-grid .help-us-description .help-us-opt-3 {
-  display: flex;
-  align-items: center;
-  margin: 2em 0;
-}
-
-.help-us-grid .help-us-description .help-us-opt-1 img,
-.help-us-grid .help-us-description .help-us-opt-2 img,
-.help-us-grid .help-us-description .help-us-opt-3 img {
-  margin-right: 2em;
-  height: 4em;
-}
-
-.help-us-grid .help-us-description button {
-  border: none;
-  margin: auto;
-  text-transform: uppercase;
-  font-family: 'Epilogue', 'sans-serif';
-  color: var(--black);
-  padding: 15px 35px;
-  font-size: .75em;
-  background-color: var(--gray);
-}
-
-.help-us-grid .help-us-description .help-us-account {
-  margin: 1.5em auto;
-  background-color: var(--white);
-  columns: var(--lightRed);
-  padding: 1em 4.5em;
-  border-radius: 1.5em;
-  display: flex;
-  flex-direction: column;
-}
-
-.help-us-grid .help-us-picture {
-  background-image: url('../images/main.jpg');
-  background-size: cover;
-  background-position-x: center;
-  box-shadow: inset 0 0 0 2000px rgba(210, 207, 197, 0.6);
 }
 
 /* ACHIEVEMENTS * /
