@@ -217,6 +217,9 @@
     const links = document.querySelectorAll(".menu ul li");
     links.forEach(n => n.addEventListener("click", closeMenu));
 
+    const logo = document.querySelector(".collapsed-menu a.logo");
+    logo.addEventListener("click", closeMenu);
+
     function closeMenu(event) {
       const checkbox = document.getElementById("collapsed-menu-checkbox");
       checkbox.checked = false;
