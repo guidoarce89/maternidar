@@ -104,19 +104,19 @@ header {
   top: -5px;
 }
 
-.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line {
+.collapsed-menu-checkbox:checked ~ .collapsed-menu .collapsed-menu-icon .collapsed-menu-icon-line {
   background-color: transparent;
 }
 
-.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::before,
-.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::after {
+.collapsed-menu-checkbox:checked ~ .collapsed-menu .collapsed-menu-icon .collapsed-menu-icon-line::before,
+.collapsed-menu-checkbox:checked ~ .collapsed-menu .collapsed-menu-icon .collapsed-menu-icon-line::after {
   top: 0;
 }
 
-.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::before {
+.collapsed-menu-checkbox:checked ~ .collapsed-menu .collapsed-menu-icon .collapsed-menu-icon-line::before {
   transform: rotate(45deg);
 }
-.collapsed-menu-checkbox:checked ~ .collapsed-menu-icon .collapsed-menu-icon-line::after {
+.collapsed-menu-checkbox:checked ~ .collapsed-menu .collapsed-menu-icon .collapsed-menu-icon-line::after {
   transform: rotate(-45deg);
 }
 
