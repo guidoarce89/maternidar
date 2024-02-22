@@ -59,6 +59,10 @@ header {
 }
 
 .header-content {
+  height: 100%;
+}
+
+.collapsed-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -555,6 +559,31 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
+  /* MENU */
+  .collapsed-menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    position: initial;
+    height: 100%;
+  }
+
+  .menu ul li:nth-child(4) {
+    display: initial;
+  }
+
+  .menu ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+  }
+
+  .menu ul li {
+    border: none;
+  }
+
   /* MAIN */
   .main h1 {
     font-size: 3.5em;
