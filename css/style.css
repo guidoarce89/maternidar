@@ -410,6 +410,59 @@ header {
   padding-bottom: 1.5em;
 }
 
+/* CONTACT */
+.contact-grid {
+  background-color: var(--lightRed);
+  display: grid;
+  grid-template-rows: 1fr 80px;
+}
+
+.contact-description {
+  background-color: var(--lightSalmon);
+  width: 80%;
+  padding: 2em 0;
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15em 15em 0 0;
+}
+
+.contact-description h2 {
+  font-family: Hatton;
+  text-transform: uppercase;
+  padding-top: 2em;
+  font-size: 1.7em;
+}
+
+.contacts p {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+.contacts p span {
+  margin: .5em 0;
+}
+
+.contact-grid footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightSalmon);
+  padding: 1em;
+}
+
+.contact-grid footer img {
+  width: 2em;
+  height: 2em;
+  margin: 0 1em;
+}
+
 @media screen and (min-width: 480px) {
   /* MAIN */
   .main h1 {
@@ -490,6 +543,15 @@ header {
   .volunteer-description-content {
     font-size: 1.2em;
   }
+
+  /* CONTACT */
+  .contact-description {
+    padding: 3em 0;
+  }
+
+  .contact-description h2 {
+    font-size: 2em;
+  }  
 }
 
 @media screen and (min-width: 1024px) {
@@ -576,6 +638,11 @@ header {
   .volunteer-description-content {
     padding: 0 2.5em 1.5em;
   }
+
+  /* CONTACT */
+  .contact-description {
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 1240px) {
@@ -624,6 +691,11 @@ header {
     width: 20em;
     margin-bottom: 2em;
   }
+
+  /* CONTACT */
+  .contact-description {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -656,6 +728,11 @@ header {
   .our-work-pictures img {
     height: 12.5em;
     width: 12.5em;
+  }
+
+  /* CONTACT */
+  .contact-description {
+    width: 40%;
   }
 }
 
