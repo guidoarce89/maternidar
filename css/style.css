@@ -25,6 +25,7 @@
 
 html {
   scroll-padding-top: 5em;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -465,6 +466,12 @@ header {
   width: 2em;
   height: 2em;
   margin: 0 1em;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 @media screen and (min-width: 480px) {
