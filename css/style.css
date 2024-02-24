@@ -44,7 +44,7 @@ body {
 
 /* MENU */
 .logo {
-  display: block;
+  display: inline-block;
   height: 2.5em;
 }
 
@@ -133,6 +133,7 @@ header {
 
 .menu ul {
   list-style: none;
+  height: 100%;
 }
 
 .menu ul li {
