@@ -31,7 +31,6 @@ html {
 body {
   font-size: 16px;
   font-family: 'Epilogue', sans-serif;
-  margin-top: 5em;
 }
 
 .wrapper {
@@ -51,9 +50,9 @@ body {
 header {
   height: 5em;
   background: var(--lightSalmon);
-  border-bottom: 2px solid var(--lightDarkSalmon);
+  border-bottom: 1px solid var(--lightDarkSalmon);
   font-family: 'Quicksand', sans-serif;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
